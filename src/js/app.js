@@ -28,18 +28,18 @@ App = {
     },
   
     initContracts: function() {
-      $.getJSON("DappTokenSale.json", function(dappTokenSale) {
-        App.contracts.DappTokenSale = TruffleContract(dappTokenSale);
-        App.contracts.DappTokenSale.setProvider(App.web3Provider);
-        App.contracts.DappTokenSale.deployed().then(function(dappTokenSale) {
-          console.log("Dapp Token Sale Address:", dappTokenSale.address);
+      $.getJSON("DEXTokenSale.json", function(DEXTokenSale) {
+        App.contracts.DEXTokenSale = TruffleContract(DEXTokenSale);
+        App.contracts.DEXTokenSale.setProvider(App.web3Provider);
+        App.contracts.DEXTokenSale.deployed().then(function(DEXTokenSale) {
+          console.log("DEX Token Sale Address:", DEXTokenSale.address);
         });
       }).done(function() {
-        $.getJSON("DappToken.json", function(dappToken) {
-          App.contracts.DappToken = TruffleContract(dappToken);
-          App.contracts.DappToken.setProvider(App.web3Provider);
-          App.contracts.DappToken.deployed().then(function(dappToken) {
-            console.log("Dapp Token Address:", dappToken.address);
+        $.getJSON("DEX_token.json", function(DEX_token) {
+          App.contracts.DEX_token = TruffleContract(DEX_token);
+          App.contracts.DEX_token.setProvider(App.web3Provider);
+          App.contracts.DEX_token.deployed().then(function(DEX_token) {
+            console.log("DEX Token Address:", DEX_token.address);
           });
   
           App.listenForEvents();
@@ -50,7 +50,7 @@ App = {
   
     // Listen for events emitted from the contract
     listenForEvents: function() {
-      App.contracts.DappTokenSale.deployed().then(function(instance) {
+      App.contracts.DEXTokenSale.deployed().then(function(instance) {
         instance.Sell({}, {
           fromBlock: 0,
           toBlock: 'latest',
@@ -82,13 +82,13 @@ App = {
       })
   
       // Load token sale contract
-      App.contracts.DappTokenSale.deployed().then(function(instance) {
-        dappTokenSaleInstance = instance;
-        return dappTokenSaleInstance.tokenPrice();
+      App.contracts.DEXTokenSale.deployed().then(function(instance) {
+        DEXTokenSaleInstance = instance;
+        return DEXTokenSaleInstance.tokenPrice();
       }).then(function(tokenPrice) {
         App.tokenPrice = tokenPrice;
         $('.token-price').html(web3.fromWei(App.tokenPrice, "ether").toNumber());
-        return dappTokenSaleInstance.tokensSold();
+        return DEXTokenSaleInstance.tokensSold();
       }).then(function(tokensSold) {
         App.tokensSold = tokensSold.toNumber();
         $('.tokens-sold').html(App.tokensSold);
@@ -98,11 +98,11 @@ App = {
         $('#progress').css('width', progressPercent + '%');
   
         // Load token contract
-        App.contracts.DappToken.deployed().then(function(instance) {
-          dappTokenInstance = instance;
-          return dappTokenInstance.balanceOf(App.account);
+        App.contracts.DEX_token.deployed().then(function(instance) {
+          DEXTokenInstance = instance;
+          return DEXTokenInstance.balanceOf(App.account);
         }).then(function(balance) {
-          $('.dapp-balance').html(balance.toNumber());
+          $('.DEX-balance').html(balance.toNumber());
           App.loading = false;
           loader.hide();
           content.show();
@@ -114,7 +114,7 @@ App = {
       $('#content').hide();
       $('#loader').show();
       var numberOfTokens = $('#numberOfTokens').val();
-      App.contracts.DappTokenSale.deployed().then(function(instance) {
+      App.contracts.DEXTokenSale.deployed().then(function(instance) {
         return instance.buyTokens(numberOfTokens, {
           from: App.account,
           value: numberOfTokens * App.tokenPrice,

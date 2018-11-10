@@ -25,7 +25,8 @@
         "scenario:cancel_orders_up_to": "cross-env yarn build && node ./lib/scenarios/cancel_orders_up_to.js",
         "scenario:forwarder_buy_erc20_tokens": "cross-env yarn build && node ./lib/scenarios/forwarder_buy_erc20_tokens.js",
         "scenario:forwarder_buy_erc721_tokens": "cross-env yarn build && node ./lib/scenarios/forwarder_buy_erc721_tokens.js",
-        "scenario:exchange_subscribe": "cross-env yarn build && node ./lib/scenarios/exchange_subscribe.js"
+        "scenario:exchange_subscribe": "cross-env yarn build && node ./lib/scenarios/exchange_subscribe.js",
+        "dev": "lite-server"
     },
     "config": {
         "mnemonic": "concert load couple harbor equip island argue ramp clarify fence smart topic",
@@ -62,6 +63,7 @@
         "download-cli": "^1.0.5",
         "ethereum-types": "^1.0.5",
         "ganache-cli": "^6.1.6",
+        "lite-server": "^2.4.0",
         "make-promises-safe": "^1.1.0",
         "npm-run-all": "^4.1.2",
         "shx": "^0.2.2",

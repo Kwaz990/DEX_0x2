@@ -1,0 +1,174 @@
+{
+  "contractName": "DexTokenSale",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820f3f84202a2584964106e7c5888298c9f7b70a738386f890c846a722082b092280029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820f3f84202a2584964106e7c5888298c9f7b70a738386f890c846a722082b092280029",
+  "sourceMap": "28:201:0:-;;;58:168;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:168:0;28:201;;;;;;",
+  "deployedSourceMap": "28:201:0:-;;;;;",
+  "source": "pragma solidity ^0.4.23;\r\n\r\ncontract DexTokenSale{\r\n\r\n    constructor() public {\r\n        //assign an admin account\r\n        //admin will be able to end sale \r\n        //build token contract\r\n        //set token price\r\n\r\n    }\r\n}",
+  "sourcePath": "/mnt/c/Users/Kwaz9/Desktop/Byte/DEX/contracts/DEXTokenSale.sol",
+  "ast": {
+    "absolutePath": "/mnt/c/Users/Kwaz9/Desktop/Byte/DEX/contracts/DEXTokenSale.sol",
+    "exportedSymbols": {
+      "DexTokenSale": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "DexTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "79:147:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "69:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:0:0"
+            },
+            "scope": 6,
+            "src": "58:168:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "28:201:0"
+      }
+    ],
+    "src": "0:229:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/mnt/c/Users/Kwaz9/Desktop/Byte/DEX/contracts/DEXTokenSale.sol",
+    "exportedSymbols": {
+      "DexTokenSale": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "DexTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "79:147:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "69:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:0:0"
+            },
+            "scope": 6,
+            "src": "58:168:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "28:201:0"
+      }
+    ],
+    "src": "0:229:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-04T20:48:51.466Z"
+}
